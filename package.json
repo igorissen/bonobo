@@ -1,5 +1,5 @@
 {
-  "name": "bonobo",
+  "name": "@igorissen/bonobo",
   "version": "1.0.0",
   "description": "Bonobo will fetch all reviews from an application on the iTunes Store",
   "author": {
