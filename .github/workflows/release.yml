@@ -32,7 +32,9 @@ jobs:
           registry-url: https://registry.npmjs.org/
           scope: '@igorissen'
       - run: npm ci
-      - run: cat .npmrc
+      - run: npm config list
+      - run: npm config set scope '@igorissen' && npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+      - run: npm config list
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
@@ -49,7 +51,9 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@igorissen'
       - run: npm ci
-      - run: cat .npmrc
+      - run: npm config list
+      - run: npm config set scope '@igorissen' && npm config set //npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN
+      - run: npm config list
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
