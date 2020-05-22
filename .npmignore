@@ -1,3 +1,22 @@
-node_modules/
-package-lock.json
+# tests
+tests
+coverage
+
+# build tools
+.travis.yml
+.jenkins.yml
+.codeclimate.yml
+.github
+
+# linters
+.jscsrc
+.jshintrc
+.eslintrc*
+
+# editor settings
 .idea
+.editorconfig
+
+# other settings
+node_modules
+src
