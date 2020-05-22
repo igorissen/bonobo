@@ -32,10 +32,11 @@ jobs:
           registry-url: https://registry.npmjs.org/
           scope: '@igorissen'
       - run: npm ci
-      - run: npm config list
-      - run: npm config set scope '@igorissen' && npm config set @igorissen:registry https://registry.npmjs.org/ && npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
-      - run: npm config list
-      - run: npm publish --access public
+      - run: |
+          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+          npm config set scope "@igorissen"
+          npm config list
+          npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
@@ -51,9 +52,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@igorissen'
       - run: npm ci
-      - run: npm config list
-      - run: npm config set scope '@igorissen' && npm config set @igorissen:registry https://npm.pkg.github.com/ && npm config set //npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN
-      - run: npm config list
-      - run: npm publish --access public
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
