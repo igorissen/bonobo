@@ -1,6 +1,6 @@
 {
   "name": "@igorissen/bonobo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Bonobo will fetch all reviews from an application on the iTunes Store",
   "author": {
     "email": "ismael.gorissen@gmail.com",
