@@ -3,22 +3,14 @@
     "module": "commonjs",
     "esModuleInterop": true,
     "target": "es2017",
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
-    "strictPropertyInitialization": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "moduleResolution": "node",
     "declaration": true,
-    "outDir": "dist",
-    "baseUrl": "."
+    "outDir": "./dist"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", ".idea"]
+  "include": ["src/**/*"]
 }

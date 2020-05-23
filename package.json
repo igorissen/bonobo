@@ -32,12 +32,13 @@
   },
   "scripts": {
     "postversion": "git push && git push --tags",
-    "build": "tsc",
-    "build:watch": "tsc --watch",
-    "test": "mocha --reporter spec --require ts-node/register tests/**/*.spec.ts"
+    "build": "npm run clean && tsc",
+    "build:watch": "npm run clean && tsc --watch",
+    "test": "mocha --reporter spec --require ts-node/register tests/**/*.spec.ts",
+    "clean": "rm -rf dist"
   },
-  "main": "dist/bonobo.js",
-  "types": "dist/bonobo.d.ts",
+  "main": "dist/public-api.js",
+  "types": "dist/public-api.d.ts",
   "files": [
     "dist/**/*"
   ],
