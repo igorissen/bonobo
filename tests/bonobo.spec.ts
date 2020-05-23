@@ -5,7 +5,7 @@ import { fetchItunesStoreCustomerReviews, Review } from '../src/bonobo';
 const expect = chai.expect;
 
 describe('Bonobo: iTunes Store customer reviews fetcher', () => {
-  it('should be able to fetch all reviews for an application in a country', async () => {
+  it('should be able to fetch all reviews for Movist application in US country', async () => {
     const reviews: Review[] = await fetchItunesStoreCustomerReviews({
       applicationIdentifier: '840784742',
       countryCode: 'us'
